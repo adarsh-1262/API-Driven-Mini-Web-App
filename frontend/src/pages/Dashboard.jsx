@@ -17,7 +17,7 @@ function Dashboard() {
   const fetchStoredRepos = async (pageNum = 1) => {
     try {
       setLoading(true);
-      const res = await axios.get(`http://localhost:5000/api/results?page=${pageNum}&limit=${limit}`);
+      const res = await axios.get(`https://api-driven-mini-web-app.onrender.com/api/results?page=${pageNum}&limit=${limit}`);
       setRepos(res.data.items || []);
       setTotalPages(res.data.pages || 1);
       setTotal(res.data.total || 0);

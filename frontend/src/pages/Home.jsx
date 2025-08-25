@@ -16,7 +16,7 @@ function Home() {
       setLoading(true);
       setError("");
       setSearchResults([]);
-      const res = await axios.post("http://localhost:5000/api/search", { keyword });
+      const res = await axios.post("https://api-driven-mini-web-app.onrender.com/api/search", { keyword });
       // The backend returns a 'returnedSample' array
       setSearchResults(res.data.returnedSample || []);
     } catch (err) {
